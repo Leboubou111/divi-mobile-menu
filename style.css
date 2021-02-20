@@ -1,0 +1,109 @@
+/* hamburger icon */
+.mobile_nav.opened > span.mobile_menu_bar::before {
+    content: '\4d';
+}
+
+ul.et_mobile_menu {
+    display: block;
+    padding: 5% 0;
+}
+
+ul.et_mobile_menu li {
+    position: relative;
+}
+ul.et_mobile_menu a {
+    background-color: transparent;
+}
+
+ul.et_mobile_menu,
+ul.et_mobile_menu > li > ul.sub-menu {
+    left: 100%;  /* change left to right */
+    position: fixed;
+    top: 50px;  /* change 50px by your menu header height */
+    height: calc(100vh - 50px);  /* change 50px by your menu header height */
+    width: 100vw;
+    transition: .5s all linear;
+}
+.et_mobile_nav_menu ul.opened {
+    left: 0!important; /* change left to right */
+}
+
+ul.et_mobile_menu > li > a {
+    font-weight: 400;
+    text-transform: uppercase;
+    border-color: #265d85;
+    padding: 30px 5%;
+}
+.et_mobile_menu > li:first-child > a {
+    padding-top: 10px;
+}
+
+ul.et_mobile_menu > li > ul.sub-menu {
+    padding-left: 0;
+    padding-bottom: 5%;
+    z-index: 100;
+}
+ul.et_mobile_menu > li > ul.sub-menu.opened {
+    overflow-y: auto;
+}
+
+ul.et_mobile_menu > li > ul.sub-menu > li.backlink-menu {
+    padding: 20px 5%;
+    border-bottom: 1px solid #265d85;
+    color: #fff;
+    text-transform: uppercase;
+    display: flex;
+}
+ul.et_mobile_menu > li > ul.sub-menu > li {
+    padding: 15px 10%;
+}
+
+ul.et_mobile_menu > li > ul.sub-menu > li > a {
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+ul.et_mobile_menu > li > ul.sub-menu > li > ul.sub-menu {
+    padding-left: 15px;
+}
+ul.et_mobile_menu > li > ul.sub-menu > li > ul.sub-menu > li {
+    padding-left: 0;
+}
+
+ul.et_mobile_menu > li > ul.sub-menu > li > ul.sub-menu > li > a {
+    padding: 10px 0;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+    ul.et_mobile_menu > li > a {
+        padding: 20px 5%;
+    }
+    ul.et_mobile_menu > li > ul.sub-menu > li {
+        padding: 10px 5%;
+    }
+    ul.et_mobile_menu > li > ul.sub-menu > li > ul.sub-menu > li > a {
+        font-size: 16px;
+    }
+}
+
+/* Icone */
+.et_mobile_menu > li > a:after,
+.et_mobile_menu > li > ul.sub-menu > li.backlink-menu:before {
+    font-size: 30px;
+    font-family: 'ETmodules';
+    color: #fff;
+}
+.et_mobile_menu > li > a:after {
+    content: '\39';
+    position: absolute;
+    right: 0;
+    margin-right: 5%;
+}
+.et_mobile_menu > li > ul.sub-menu > li.backlink-menu:before {
+    content: '\38';
+    padding-right: 20px;
+}
